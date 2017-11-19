@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSA Cipher</title>
+    <script src="http://peterolson.github.com/BigInteger.js/BigInteger.min.js"></script>
+    <script type="text/javascript" src="application.js"></script>
+  </head>
+<body>
+
+    <div class="box" style="height: 40px;">
+      <label for="std_id">Student ID: </label>
+      <input type="text" id="std_id" value="3666">
+    </div>
+
+    <div class="box" style="margin-bottom: 20px;">
+        <button id="button" onclick="generate_keys()">Generate Keys</button>
+        <button id="button" onclick="encrypt()">Encrypt</button>
+        <button id="button" onclick="decrypt()">Decrypt</button>
+    </div>
+
+
+
+    <div class="box">
+
+      <label for="PU">Public key :  </label>
+      <span id="PU"></span>
+
+      <br>
+
+      <label for="PR">Private key :  </label>
+      <span id="PR"></span>
+
+    </div>
+<br>
+    <div class="box">
+      <label for="output">Output : </label>
+      <span id="output"></span>
+      <br>
+      <label for="nums">Display all other numbers used in calculation:</label>
+      <input id="nums" type="checkbox"></input>
+    </div>
+<br>
+    <div class="box">
+      <h2>Instructions</h2>
+      <p><strong>#1</strong> : Enter student ID into the Student ID text box.</p>
+      <p><strong>#2</strong> : Press Generate Keys, this will generate a public and private key based on the input.</p>
+      <p><strong>#3</strong> : Press Encrypt to encrypt the Student ID with the public key.</p>
+      <p><strong>#4</strong> : Copy the number in output and paste it into the Student ID text input, then press Decrypt to decrypt the Student ID with the private key.</p>
+      <br>
+      <h2>Misc</h2>
+      <p><strong>#1</strong> : The two primes used in this app are 19 and 29</p>
+      <p><strong>#2</strong> : The algorithm assumes that the input is 4 digits long and numerical when using the encrypt function.</p>
+      <p><strong>#3</strong> : The algorithm assumes that the input it 6 digits long and numerical when using the decrypt function.</p>
+
+    </div>
+<script>
+var bigInt = require("big-integer");
+</script>
+</body>
+</html>
